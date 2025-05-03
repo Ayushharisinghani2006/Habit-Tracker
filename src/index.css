@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gradient-text: linear-gradient(90deg, #3B82F6, #8B5CF6);
+  }
+}
+
+@layer components {
+  .gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 900;
+  }
+
+  .glassmorphic {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    pointer-events: auto !important;
+  }
+
+  .neumorphic {
+    background: linear-gradient(145deg, #2d3748, #1f2937);
+    box-shadow: 10px 10px 20px #1a202c, -10px -10px 20px #374151;
+    border-radius: 32px;
+  }
+
+  .ar-overlay {
+    pointer-events: none;
+  }
+
+  .ar-overlay button {
+    pointer-events: auto !important;
+  }
+
+  .holographic-canvas {
+    width: 100%;
+    height: 600px;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Ensure massive button sizes and PDF compliance */
+button {
+  font-size: 56px !important;
+  padding: 20px 32px !important;
+  line-height: 1.2 !important;
+}
+
+h1 {
+  font-size: 160px !important;
+}
+
+h2 {
+  font-size: 120px !important;
+}
+
+h3 {
+  font-size: 80px !important;
+}
+
+p, span, input, label {
+  font-size: 26px !important;
+}
+
+/* Fix for range input to match massive sizes */
+input[type="range"] {
+  height: 16px !important;
+  border-radius: 16px !important;
+}
+
+input[type="text"], input[type="number"] {
+  padding: 16px !important;
+  font-size: 48px !important;
+}
